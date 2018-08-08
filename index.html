@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Git Checker</title>
+</head>
+<body>
+	<h1>Git Checker</h1>
+
+	<input type="search" placeholder="Enter git command" pattern='git (((init|clone|checkout|show|fetch|add) [\S]+)|((mv|push) .+? [\S]+)|(status|pull)|((reset( --hard)?|rm( --cached)?) [\S]+)|(branch(( -d)? [\S]+)?)|(diff( --staged| .+\.{3}[\S]+)?)|(commit -m ".+?")|(merge (.+\/)?[\S]+)|(stash( (list|pop|drop))?)|(log( --follow [\S]+)?)|(ls-files --other --ignored --exclude-standard)|(config --global (user\.(name|email) ".+?"|color\.ui auto)))' autofocus />
+
+	<div class="bg-validation"></div>
+
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			flex-direction: column;
+			font-family: Arial;
+		}
+		h1 {
+			margin-top: 0;
+		}
+		input {
+			display: block;
+			width: 95%;
+			padding: 10px;
+			font-size: 1.2em; 
+			border: 2px solid transparent;
+			border-radius: 10px;
+			outline: 0;
+			background: #fff !important;
+		}
+		input:focus {
+			border-color: #000;
+		}
+		input ~ .bg-validation {
+			width: 100vw;
+			height: 100vh;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			transition: background 300ms ease;
+		}
+		input:valid ~ .bg-validation {
+			background: #badc58;
+		}
+		input:invalid ~ .bg-validation {
+			background: #eb4d4b;
+		}
+		@media (min-width: 480px) and (orientation: landscape) {
+			input {
+				width: 400px;
+				font-size: 1.5em; 
+			}
+		}
+	</style>
+</body>
+</html>
