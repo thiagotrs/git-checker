@@ -13,7 +13,7 @@ The HTML part uses Regular Expressions in pattern atribute of input form.
 
 ## Reference
 
-The Reference of Git commands: [GitHub Cheat Sheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
+The Reference of Git commands: [GitHub Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
 
 ## Authors
 
